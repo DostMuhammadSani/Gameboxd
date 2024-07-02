@@ -1,0 +1,148 @@
+* {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home-page {
+  position: relative;
+  text-align: center;
+}
+
+.background-image {
+  width: 70%;
+  height: auto;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 15%;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0);
+  color: white;
+}
+
+.navbar-left {
+  font-size: 32px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0);
+}
+
+.navbar-right button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+}
+
+.navbar-right button:hover {
+  background: white;
+  color: black;
+}
+
+.center-content {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  background-color: transparent;
+}
+
+.center-content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  background-color: transparent;
+}
+.footer {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  background-color: transparent;
+  color:#789;
+}
+.main-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+}
+
+.main-button:hover {
+  background: white;
+  color: black;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .background-image {
+    width: 90%;
+  }
+  
+  .navbar {
+    left: 5%;
+    width: 90%;
+  }
+  
+  .navbar-left {
+    font-size: 28px;
+  }
+  
+  .navbar-right button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  
+  .center-content h1 {
+    font-size: 28px;
+  }
+  
+  .main-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .background-image {
+    width: 100%;
+  }
+  
+  .navbar {
+    left: 0;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .navbar-left {
+    font-size: 24px;
+  }
+  
+  .navbar-right button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  
+  .center-content h1 {
+    font-size: 24px;
+  }
+  
+  .main-button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
