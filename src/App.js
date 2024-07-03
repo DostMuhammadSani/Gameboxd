@@ -1,31 +1,25 @@
-import React from 'react';
-import './HomePage.css'; 
-import image from './Pics/1.jpg'; 
+import logo from './logo.svg';
+import './App.css';
+import { BrowserRouter as Router, Route,Routes } from 'react-router-dom';
+import HomePage from './HomePage';
+import Login from './Login';
+import Signup from './SignUp';
 
-const HomePage = () => {
+function App() {
   return (
-    <div className="home-page">
-      <img src={image} alt="Background" className="background-image" />
-      <nav className="navbar">
-        <div className="navbar-left">Gameboxd</div>
-        <div className="navbar-right">
-          <button>Sign In</button>
-          <button>Sign Up</button>
-        </div>
-      </nav>
-       <div className="center-content">
-        <h1>Welcome to Gameboxd</h1>
-        <button className="main-button">Get Started</button>
-       
+   
+    <div className="App">
   
-      </div>
-      <div className='footer'>
-        <strong>
-        The social network for game lovers.
-        </strong>
-      </div>
+      <Router>
+     <Routes>
+          <Route path="/"  element={<HomePage/>} />
+          <Route path="/login" element={<Login/>} />
+          <Route path="/signup" element={<Signup/>} />
+          </Routes>
+          </Router>
     </div>
+ 
   );
-};
+}
 
-export default HomePage;
+export default App;
