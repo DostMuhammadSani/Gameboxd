@@ -1,0 +1,142 @@
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: #000;
+    color: white;
+  }
+  
+  .navbar-l {
+    font-size: 24px;
+    font-weight: bold;
+    background-color: transparent;
+  }
+  
+  .navbar-r {
+    margin-right: 30%;
+  }
+  
+  .navbar-r a {
+    margin-left: 10px;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .bodi {
+    background-color: #14181c;
+    width: 100%;
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .bodi h1{
+    color: #abc;
+    font-size: 24px;
+    margin: 0 0 12px;
+    background-color: transparent;
+  }
+  
+  .popular-games {
+    text-align: center;
+    color: white;
+    background-color: #14181c; ;
+    
+  }
+  
+  .popular-games h2 {
+    font-size: 14px;
+    text-align: left;
+    color: #abc;
+  }
+  
+  .game-images {
+    border-top: 2px solid #abc;
+    padding-top: 20px;
+    background-color: #14181c; ;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #14181c; ;
+  }
+  
+  .game-images img {
+    width: 10vw;  /* Adjust the width as needed */
+    height: 30vh;
+    background-color: #14181c; 
+   
+  }
+
+  .News{
+    border-top: 2px solid #abc;
+    background-color: #14181c;
+    padding-top: 20px;
+    display: flex;
+    width: 55vw;
+  }
+
+  .imagenews{
+    background-color:transparent ;
+  }
+  .imagenews img{
+    width: 25vw;
+    height: 20vh;
+    background-color: transparent;
+  }
+  
+  .news{
+    background-color: #14181c;
+  }
+
+  .news a{
+    background-color:#14181c;
+    color: white;
+    font-size: 23px;
+  }
+  /* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+   
+    .navbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background: #000; /* Added some transparency for readability */
+      color: white;
+    }
+    .navbar-l {
+      font-size: 18px;
+    }
+    
+    .navbar-r a  {
+      font-size: 14px;
+      
+    }
+    
+    .bodi h1{
+        top: 40%;
+        color: #abc;
+        font-size: 14px;
+        margin: 0 0 12px;
+        background-color: transparent;
+      }
+    
+      .game-images img {
+        width: 15vw;  /* Adjust the width as needed */
+        height: 17vh;
+        background-color: #14181c; ;
+       
+      }
+    
+  }
+  
+  
