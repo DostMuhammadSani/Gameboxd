@@ -1,14 +1,9 @@
-* {
-  background-color: black;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 .home-page {
   position: relative;
   text-align: center;
   min-height: 100vh; /* Changed height to min-height for responsiveness */
+  background-color: black;
 }
 
 .background-image {
@@ -20,7 +15,7 @@
 .navbar {
   position: absolute;
   top: 0;
-  left: 20%;
+  left: 17%;
   width: 70%;
   display: flex;
   justify-content: space-between;
@@ -87,7 +82,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 90vw;
     display: flex;
     justify-content: space-between;
     padding: 10px 20px;

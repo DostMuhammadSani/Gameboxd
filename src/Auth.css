@@ -1,65 +1,121 @@
-body {
-    background-color: #121212;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-  }
   
-  .auth-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .auth-box {
-    background-color: #1e1e1e;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  .signup-container {
     width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
     text-align: center;
   }
   
-  h2 {
-    background-color: transparent;
+  .signup-container h2 {
     margin-bottom: 20px;
   }
   
-  .input-group {
-    background-color: #1e1e1e;
-  
-    margin-bottom: 15px;
-    text-align: left;
+  .signup-container input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
   }
   
-  .input-group label {
-    background-color: #1e1e1e;
-   
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .input-group input {
+  .signup-container button {
     width: 100%;
     padding: 10px;
-    border: none;
-    border-radius: 4px;
-    background-color: #333;
+    background-color: #007bff;
     color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
   }
   
-  .auth-button {
-    width: 100%;
+  .signup-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .signup-container p {
+    margin-top: 20px;
+  }
+  
+  .signup-container a {
+    color: #007bff;
+  }
+  /* App.css */
+  
+  /* Styles for the SignupForm component */
+  .sign {
+    font-family: Arial, sans-serif;
+    max-width: 400px;
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-attachment:white;
+    display: flex;
+    flex-direction: column;
+    background-color: #14181c;
+    
+  }
+  
+  .signbod{
+    background-color:black;
+    height: 100vh;
+  }
+  
+  .sign h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ccc;
+  }
+  
+  .sign form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sign input[type='text'],
+  .sign input[type='password'],
+  .sign button {
+    margin-bottom: 15px;
     padding: 10px;
-    border: none;
-    border-radius: 4px;
-    background-color: #6200ea;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .sign input[type='text'],
+  .sign input[type='password'] {
+    width: calc(100% - 20px); 
+    font-size: 16px;
+    margin-right: 20px; 
+  }
+  
+  .sign button {
+    
+    background-color: #007bff;
     color: #fff;
     cursor: pointer;
-    font-size: 16px;
+    transition: background-color 0.3s ease;
   }
   
-  .auth-button:hover {
-    background-color: #3700b3;
+  .sign button:hover {
+    background-color: #0056b3;
+  }
+  
+  .sign p {
+    text-align: center;
+    color: white;
+  }
+  
+  .sign p a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .sign p a:hover {
+    color: #0056b3;
   }
   

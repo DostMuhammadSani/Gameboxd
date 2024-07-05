@@ -16,7 +16,7 @@ import twelve from './Pics/twelve.jpg';
 const Main = () => {
   return (
     <div className="main">
-      <nav className="navbar">
+      <nav className="navbar1">
         <div className="navbar-l">Gameboxd</div>
         <div className="navbar-r">
           <a href="#">Profile</a>

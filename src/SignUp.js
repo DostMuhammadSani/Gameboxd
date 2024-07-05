@@ -1,26 +1,41 @@
 import React from 'react';
-import './Auth.css'; 
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import "./Auth.css";
 
-const Signup = () => {
+const SignupForm = () => {
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const username = e.target.username.value;
+    const password = e.target.password.value;
+
+    axios.post('http://localhost:5000/signup', { username, password })
+      .then(response => {
+        if (response.data.success) {
+          alert("Account Created");
+          navigate('/login');
+        }
+      })
+      .catch(error => {
+        alert(`Error creating account: ${error.response?.data?.error || error.message}`);
+      });
+  };
+
   return (
-    <div className="auth-container">
-      <div className="auth-box">
-        <h2>Sign Up</h2>
-        <form>
-          <div className="input-group">
-            <label>User Name</label>
-            <input type="text" required />
-          </div>
-          <div className="input-group">
-            <label>Password</label>
-            <input type="password" required />
-          </div>
-         
-          <button type="submit" className="auth-button">Sign Up</button>
-        </form>
-      </div>
+    <div className='signbod'>
+    <div className="sign">
+      <h1>Signup</h1>
+      <form onSubmit={handleSubmit}>
+        <input name="username" type="text" placeholder="User Name" required />
+        <input name="password" type="password" placeholder="Password" required />
+        <button type="submit">Signup</button>
+        <p>Already have an account? <Link to="/login">Login</Link></p>
+      </form>
+    </div>
     </div>
   );
 };
 
-export default Signup;
+export default SignupForm;
