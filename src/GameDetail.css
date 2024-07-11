@@ -1,9 +1,99 @@
-.gd{
-    height: 100vh;
-    background-color:black;
-}
-
-.gd h1{
+.gd {
+    text-align: center;
+    padding: 20px;
+    background-color: #14181c;
+  }
+ 
+  
+  
+.container {
+    position: relative;
+    text-align: center;
     color: white;
 }
 
+.background-image {
+    width: 100%;
+    height: 100vh;
+}
+
+.content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    width: 95vw;
+    text-align: left;
+    overflow: hidden;
+}
+
+.content h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.content p {
+    margin: 10px 0;
+}
+
+.poster {
+    width: 150px;
+    margin-right: 20px;
+    float: left;
+}
+
+.details {
+    overflow: hidden;
+}
+
+.details p {
+    margin: 0;
+}
+
+.details a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.actions {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.input-box {
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: #444;
+    color: white;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background: #666;
+}
+
+.submitted-data {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}

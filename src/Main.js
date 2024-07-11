@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Main.css';
 import two from './Pics/two.jpg';
@@ -14,13 +14,25 @@ import eleven from './Pics/eleven.jpg';
 import twelve from './Pics/twelve.jpg'; 
 
 const Main = () => {
+  const [username, setUsername] = useState('');
+
+  useEffect(() => {
+    const storedUsername = localStorage.getItem('username');
+    if (storedUsername) {
+      setUsername(storedUsername);
+    }
+  }, []);
+
   return (
     <div className="main">
+      
       <nav className="navbar1">
         <div className="navbar-l">Gameboxd</div>
         <div className="navbar-r">
+        <strong>Welcome {username}</strong>
           <a href="#">Profile</a>
           <a href="#">Reviews</a>
+          
         </div>
       </nav>
       <div className="bodi">
@@ -49,7 +61,7 @@ const Main = () => {
             <Link to="/game/7"><img src={five} alt="Game 2" /></Link>
             <Link to="/game/8"><img src={six} alt="Game 3" /></Link>
             <Link to="/game/9"><img src={eight} alt="Game 4" /></Link>
-            <Link to="/game/10"><img src={eleven} alt="Game 5" /></Link>
+            <Link to="/game/10"><img src={nine} alt="Game 5" /></Link>
           </div>
           <br></br>
        <br></br>
@@ -64,19 +76,9 @@ const Main = () => {
             <a href='https://www.ign.com/articles/amazon-is-giving-away-15-pc-games-to-prime-members'>Amazon Prime is giving away 15 PC games for free — including one of the best Star Wars titles ever made</a>
         </div>
        </div>
-
-
         </div>
       </div>
-
-    
-
-     
-          
-          </div>
-       
-
-    
+    </div>
   );
 };
 
