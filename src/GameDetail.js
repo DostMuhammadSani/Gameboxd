@@ -28,10 +28,10 @@ const GameDetail = () => {
 
   return (
     <div className="container">
-    <img src={game.image2} alt="Godzilla vs Kong" className="background-image" />
+    <img src={game.image2}  className="background-image" />
     <div className="content">
       <div className="details">
-        <img src={game.image1} alt="Godzilla vs Kong Poster" className="poster" />
+        <img src={game.image1}  className="poster" />
         <div>
           <h1>{game.name}</h1>
         
