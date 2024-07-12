@@ -1,0 +1,67 @@
+.rev {
+    width: 100vw;
+    height: 100vh;
+    background-color: #14181c;
+    padding: 20px; /* Adding padding for better spacing */
+    box-sizing: border-box; /* Include padding in width and height calculations */
+}
+
+.rev h2 {
+    color: #f1f1f1;
+    text-align: center;
+}
+
+.table-container {
+    width: 100%;
+    max-width: 1200px; /* Limiting maximum width for larger screens */
+    margin: 20px auto; /* Centering the container and adding space */
+    overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+thead {
+    background-color: #f4f4f4;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+td {
+    color: #555;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .table-container {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    th, td {
+        padding: 8px; /* Adjusting padding for smaller screens */
+    }
+}

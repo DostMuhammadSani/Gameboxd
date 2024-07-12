@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './GameDetail.css';
 import gameData from './gameData';
+import axios from 'axios';
 
 const GameDetail = () => {
   const { id } = useParams();
@@ -10,17 +11,34 @@ const GameDetail = () => {
   const [rating, setRating] = useState('');
   const [submittedReview, setSubmittedReview] = useState('');
   const [submittedRating, setSubmittedRating] = useState('');
+  const [username, setUsername] = useState('');
+  const [gamename, setGamename] = useState('');
+
+  useEffect(() => {
+    const storedUsername = localStorage.getItem('username');
+    if (storedUsername) {
+      setUsername(storedUsername);
+    }
+    const game = gameData.find(game => game.id === parseInt(id));
+    setGame(game);
+    setGamename(game.name);
+  }, [id]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmittedReview(review);
     setSubmittedRating(rating);
+    axios.post('http://localhost:5000/reviewpost', { username, gamename,review,rating })
+      .then(response => {
+        alert("Review Posted");
+       
+      })
+      .catch(error => {
+        alert("Review Not Posted");
+      });
   };
 
-  useEffect(() => {
-    const game = gameData.find(game => game.id === parseInt(id));
-    setGame(game);
-  }, [id]);
+  
 
   if (!game) {
     return <div>Loading...</div>;

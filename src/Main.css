@@ -37,11 +37,32 @@
     align-items: center;
     justify-content: center;
   }
+
+  .here {
+    position: relative;
+    display: inline-block; /* Adjust based on your layout needs */
+  }
+  
+  .bimage {
+    width: 100vw; /* Adjust as needed */
+    height: 50vh; /* Adjust as needed */
+  }
+  
+  
+  
+
   .bodi h1{
     color: #abc;
     font-size: 24px;
     margin: 0 0 12px;
     background-color: transparent;
+    position: absolute;
+    top: 50%; /* Adjust as needed */
+    left: 50%; /* Adjust as needed */
+    transform: translate(-50%, -50%); /* Center the text */
+    color: white; /* Adjust text color */
+    font-size: 24px; /* Adjust font size */
+    text-align: center; /* Adjust text alignment */
   }
   
   .popular-games {
@@ -124,7 +145,7 @@
     }
 
     .navbar-r strong{
-      font-size: 5px;
+      font-size: 4px;
     }
     
     .bodi h1{

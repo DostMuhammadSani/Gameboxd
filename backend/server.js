@@ -5,6 +5,8 @@ const crypto = require('crypto');
 
 
 const cors = require('cors');
+const { type } = require('os');
+const { Console } = require('console');
 require('dotenv').config();
 
 const app = express();
@@ -24,8 +26,15 @@ const userSchema = new mongoose.Schema({
     createdAt: { type: Date, default: Date.now }
 });
 
-const User = mongoose.model('userinformation', userSchema,'userinfo');
+const reviewSchema = new mongoose.Schema({
+    username: { type: String, required: true },
+    gamename: { type: String, required: true },
+    review: {type: String, required:true},
+    rating: {type:String, required:true}
+});
 
+const User = mongoose.model('userinformation', userSchema,'userinfo');
+const Review= mongoose.model('Review',reviewSchema,'ReviewInfo');
 app.use(cors(
     ));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -53,8 +62,32 @@ app.post('/login', async (req, res) => {
        res.status(200).json({message:'User Exist',success: true})
 });
     
+app.post('/reviewpost', async (req, res) => {
+    const { username, gamename,review,rating } = req.body;
+
+    const newReview = new Review({ username, gamename,review,rating });
+
+   const saveReview=await newReview.save();
+   console.log('Data Entered Successfully');
+   res.status(201).json({message: 'Review Created',saveReview,success:true});
+  
+});
 
 
+app.get('/reviewget', async (req, res) => {
+    try {
+      const reviews = await Review.find();
+      if (!reviews.length) {
+        res.status(404).json({ success: false, message: 'Reviews Not Found' });
+      } else {
+        res.status(200).json({ success: true, reviews });
+        console.log("Reviews Found");
+      }
+    } catch (error) {
+      res.status(500).json({ success: false, message: 'Server Error', error });
+    }
+  });
+  
 
 
 app.listen(port, () => {

@@ -12,6 +12,7 @@ import nine from './Pics/nine.jpg';
 import ten from './Pics/ten.jpg';   
 import eleven from './Pics/eleven.jpg'; 
 import twelve from './Pics/twelve.jpg'; 
+import icon from './Pics/icon.jpg';
 
 const Main = () => {
   const [username, setUsername] = useState('');
@@ -30,17 +31,18 @@ const Main = () => {
         <div className="navbar-l">Gameboxd</div>
         <div className="navbar-r">
         <strong>Welcome {username}</strong>
-          <a href="#">Profile</a>
-          <a href="#">Reviews</a>
+         
+          <a href="/reviews">Reviews</a>
+          <a href="/login">Logout</a>
           
         </div>
       </nav>
       <div className="bodi">
+        <div className='here'>
+          <img src={icon} className='bimage'></img>
         <h1>Welcome back. Here’s what we’ve been playing…</h1>
-       <br></br>
-       <br></br>
-       <br></br>
-       <br></br>
+       
+       </div>
         <div className="popular-games">
           <h2>Popular Games</h2>
           <div className="game-images">

@@ -6,6 +6,7 @@ import Login from './Login';
 import Signup from './SignUp';
 import Main from './Main';
 import GameDetail from './GameDetail';
+import ReviewTable from './Reviews';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/signup" element={<Signup/>} />
           <Route path="/main" element={<Main/>} />
           <Route path="/game/:id" element={<GameDetail/>} />
+          <Route path="/reviews" element={<ReviewTable/>}/>
           </Routes>
           </Router>
     </div>
